@@ -1,3 +1,10 @@
-body {
-  background-color: aqua;  
+* {  
+  margin: 0;
+  padding: 0;
 }
+  nav {
+    background-color: cadetblue;
+  }
+  .project-tile img {
+    width: 200px;
+  }
