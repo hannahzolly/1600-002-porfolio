@@ -2,9 +2,134 @@
   margin: 0;
   padding: 0;
 }
-  nav {
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-style: oblique;
+  color: cadetblue;
+}
+
+h2 {
+  color: rgb(50, 64, 78);
+}
+
+h3 {
+  color: rgb(50, 64, 78);
+  font-style: oblique;
+  font-size: 3.5rem;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+.fit-picture {
+  width: 250px;
+}
+
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
     background-color: cadetblue;
+    position: fixed;
+    width: 100%;
   }
-  .project-tile img {
-    width: 200px;
+
+  .nav-list {
+    display: flex;
+    list-style-type: none;
+    margin-right: 2rem;
+  }
+
+  .nav-list a {
+    display: block;
+    font-size: 2rem;
+    padding: 2rem;
+    color: rgb(50, 64, 78);
+    text-decoration: none;
+  }
+
+  .nav-list a:hover {
+    background: white;
+  }
+  
+  #welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    }
+
+  .projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: gainsboro;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 1px 1px 1px #8b8b8b;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+  figure img {
+    width: 20rem;
   }
