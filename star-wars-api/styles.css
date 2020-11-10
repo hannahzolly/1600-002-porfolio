@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: darkred;
+}
+
+figure {
+    margin: 1rem;
+    color: white;
+    font-style: oblique 40deg;
+    font-size: 1.5rem;
+}
+
+figcaption {
+    text-align: center;
+    background-color: darkblue;
+    padding: 20px 0px 20px 0px;
+    border: .5rem solid white;
+}
