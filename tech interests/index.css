@@ -1,0 +1,112 @@
+body {
+    background-color: rgba(30,74,81,.14);
+    width: 1149px;
+    margin: 0 auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  header img {
+    height: 142px;
+  }
+  
+  img {
+    height: 193px;
+    padding: 4px;
+  }
+  
+  #bio {
+    display: flex;
+  }
+  
+  #bio-choose {
+    width: 100%;
+    margin-left: 8px;
+  }
+  
+  #name-date {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 0;
+  }
+  
+  #name-date h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #name-date {
+  margin-bottom: 10px;
+  backgroud-color: white;
+  }
+  
+  #choose-list {
+    background-color: #FFF;
+    padding: 8px;
+  }
+  
+  h2 {
+    color: rgba(30,74,81,1);
+    font-family: 'Bodoni 11';
+  }
+  
+  h2, h4 {
+    margin:0;
+  }
+  
+  time {
+    color: rgba(30,74,81,1);
+    font: bold 1.5em 'Bodoni 11';
+  }
+  
+  h4 {
+    margin: 0;
+    border: 3px white;
+  }
+  
+  ul {
+    padding:0 0 0 17px;
+    margin: 10px 0 16px 0;
+  }
+  
+  #tech {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  figure {
+    margin:0;
+    padding:0;
+    text-align:center;
+  }
+  
+  figure img {
+    height: 150px;
+  }
+  
+  figcaption {
+    background-color: rgba(30,74,81,.8);
+    width: 160px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -25px;
+  }
+  
+  #excited-about {
+  background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  
+  footer {
+    text-align: center;
+    color: rgba(30,74,81,1);;
+  }
+  
+  
