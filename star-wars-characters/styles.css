@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+mainHeader {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    background-color: darkred;
+}
