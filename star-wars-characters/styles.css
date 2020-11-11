@@ -3,9 +3,19 @@
     box-sizing: border-box;
 }
 
-mainHeader {
+.mainHeader {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem;
     background-color: darkred;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure img {
+    max-height: 12rem;
 }
