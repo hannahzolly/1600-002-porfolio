@@ -8,6 +8,7 @@
     justify-content: space-evenly;
     margin: 1rem;
     background-color: darkred;
+    padding: 15px;
 }
 
 main {
@@ -18,4 +19,20 @@ main {
 
 figure img {
     max-height: 12rem;
+}
+
+figcaption {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+    color: white;
+}
+
+body {
+    background-color: darkblue;
+}
+
+button {
+    color: darkblue;
+    outline: white;
 }
