@@ -73,9 +73,14 @@ function populateCardBack(pokemon) {
     return pokeBack
 }
 
-function getMovesDetail(pokemonMoves) {
-    const movesUrl = pokemonMoves [0].move.url
-    return getAPIData(movesUrl).then((data) => data.type.name)
+async function getMovesDetails(pokemonMoves) {
+    const result = pokemonMoves.reduce(async (acc, move) => {
+        //console.log( move.move)
+        const moveData = await getAPIData(move.move.url)
+    console.log(moveData.accuracy, moveData.power)
+    })
+    //const movesUrl = pokemonMoves [0].move.url
+    //console.log(moveData)
 }
 
 function getImageFileName(pokemon) {

@@ -30,9 +30,20 @@ figcaption {
 
 body {
     background-color: darkblue;
+    padding: 10px;
+    color: darkred;
 }
 
 button {
     color: darkblue;
     outline: white;
+    padding: 10px;
+    border-color: darkred;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* .malebutton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: darkred;
+} */
