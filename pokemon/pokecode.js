@@ -28,8 +28,13 @@ const newPokemonButton = document.querySelector('.newPokemon')
 
 newPokemonButton.addEventListener('click', () => {
     let pokeName = prompt('What is your new Pokemon name?')
-    let newPokemon = new Pokemon(pokeName, 400,200, ['gorge', 'sleep'])
-    console.log(newPokemon)
+    let newPokemon = new Pokemon(
+        pokeName, 
+        400,
+        200, 
+        ['gorge', 'sleep', 'cough'],
+        ['eat', 'study','code'])
+    populatePokeCard(newPokemon)
 })
 
 loadButton.addEventListener('click', () => {
@@ -74,14 +79,26 @@ function populateCardBack(pokemon) {
 }
 
 async function getMovesDetails(pokemonMoves) {
-    const result = pokemonMoves.reduce(async (acc, move) => {
-        //console.log( move.move)
-        const moveData = await getAPIData(move.move.url)
-    console.log(moveData.accuracy, moveData.power)
-    })
-    //const movesUrl = pokemonMoves [0].move.url
-    //console.log(moveData)
+
+    const nonNullMoves = pokemonMoves.filter(async (move) => { 
+        if(!move.move) return
+        const moveData = await getAPIData(move.move.url) 
+        console.log(moveData.accuracy, moveData.power)
+        if ((moveData.accuracy && moveData.power) !== null) {
+            return moveData
+    }
+})
+console.log(nonNullMoves.length)
+ 
+  
+    // const result = pokemonMoves.reduce(async (acc, move) => {
+    //     //console.log( move.move)
+    //     const moveData = await getAPIData(move.move.url)
+    // console.log(moveData.accuracy, moveData.power)
+    // })
+    
 }
+
 
 function getImageFileName(pokemon) {
     if (pokemon.id < 10) {
@@ -94,12 +111,13 @@ function getImageFileName(pokemon) {
     return `pokeball`
 }
 
-function Pokemon(name, height, weight, abilities) {
+function Pokemon(name, height, weight, abilities, moves) {
     this.name = name
     this.height = height
     this.weight = weight
     this.abilities = abilities
     this.id = 900
+    this.moves = moves
 }
 
 

@@ -1,4 +1,5 @@
 import { films } from '../data/films.js'
+import { getLastNumber} from '../utils/index.js'
 
 const main = document.querySelector('main')
 
@@ -8,10 +9,9 @@ for (let i = 0; i < 7; i++) {
     figImg.src = `https://starwars-visualguide.com/assets/img/films/${i + 1}.jpg`
     let figCaption = document.createElement('figcaption')
 
-    // const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
+    const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
 
-    //figCaption.textContent = foundFilm.title
-    figCaption.textContent = films[i].title
+    figCaption.textContent = foundFilm.title
     
     
     figure.appendChild(figImg)
